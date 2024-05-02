@@ -1,0 +1,171 @@
+---
+---
+
+// ^ dont remove these, otherwise jekyll wont convert this .scss -> .css
+
+@import "normalize";
+
+@font-face {
+  font-family: 'seanslabnormalsemibold';
+  src: url('./fonts/seanslab-normalsemibold-webfont.woff2') format('woff2'),
+       url('./fonts/seanslab-normalsemibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #1c1b20;
+  color: #fff;
+  margin: 0;
+  font-family: 'seanslabnormalsemibold';
+}
+h1 {
+  font-family: 'Clicker Script', cursive;
+}
+.ucase {
+  text-transform: uppercase;
+}
+.social-icon {
+  width: 20px;
+  vertical-align: middle;
+}
+.text-center {
+  text-align: center;
+}
+.main {
+  font-size: 1rem;
+  padding-bottom: 4rem;
+}
+@media (min-width:768px) {
+  .main {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width:992px) {
+  .main {
+    font-size: 1.2rem;
+  }
+}
+.main a {
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// poor mans bootstrap
+*, :after, :before {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto
+}
+@media (min-width:576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width:768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width:992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+// @media (min-width:1200px) {
+//   .container {
+//     max-width: 1140px;
+//   }
+// }
+
+.wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 58.77192982%;
+}
+
+/*
+.griddy {
+  display: grid;
+  grid-template-columns: 18.5% 18.5% 26% 18.5% 18.5%;
+  grid-template-rows: 36.5% 26.5% 37%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "A A B C C"
+    "D E B F G"
+    "H H I J J";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.a { grid-area: A; }
+.b { grid-area: B; }
+.c { grid-area: C; }
+.d { grid-area: D; }
+.e { grid-area: E; }
+.f { grid-area: F; }
+.g { grid-area: G; }
+.h { grid-area: H; }
+.i { grid-area: I; }
+.j { grid-area: J; }
+*/
+
+.griddy .a { top: 0;     left: 0;     width: 37%;   height: 36.5%; }
+.griddy .b { top: 0;     left: 37%;   width: 26%;   height: 63%; }
+.griddy .c { top: 0;     left: 63%;   width: 37%;   height: 36.5%; }
+
+.griddy .d { top: 36.5%; left: 0;     width: 18.5%; height: 26.5%; }
+.griddy .e { top: 36.5%; left: 18.5%; width: 18.5%; height: 26.5%; }
+.griddy .f { top: 36.5%; left: 63%;   width: 18.5%; height: 26.5%; }
+.griddy .g { top: 36.5%; left: 81.5%; width: 18.5%; height: 26.5%; }
+
+.griddy .h { top: 63%;   left: 0;     width: 37%;   height: 37%; }
+.griddy .i { top: 63%;   left: 37%;   width: 26%;   height: 37%; }
+.griddy .j { top: 63%;   left: 63%;   width: 37%;   height: 37%; }
+
+.griddy > div {
+  position: absolute;
+  overflow: hidden;
+  &:hover {
+    &:before {
+      transform: scale(1.05);
+      transform-origin: 50% 50%;
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transition: transform .2s;
+  }
+}
+
+.a:before { background-image: url('../img/a.jpg'); }
+.b:before { background-image: url('../img/b.jpg'); }
+.c:before { background-image: url('../img/c.jpg'); }
+.d:before { background-image: url('../img/d.jpg'); }
+.e:before { background-image: url('../img/e.jpg'); }
+.f:before { background-image: url('../img/f.jpg'); }
+.g:before { background-image: url('../img/g.jpg'); }
+.h:before { background-image: url('../img/h.jpg'); }
+.i:before {
+  background-image: url('../img/logo.svg');
+  background-color: #fff;
+  background-size: contain !important;
+}
+.j:before { background-image: url('../img/j.jpg'); }

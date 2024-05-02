@@ -1,0 +1,17 @@
+# Jekyll configuration
+
+name: Phoenix and Wren Photography
+description: Moments captured, memories treasured
+author:
+  name: Mike Causer
+  email: mcauser@gmail.com
+
+url: http://phoenixandwren.github.io/phoenixandwren-com-au
+
+exclude: [".ruby-version", "Gemfile", "Gemfile.lock", "README.md"]
+
+sass:
+  style: compressed
+  sass_dir: css/_scss
+
+encoding: utf-8
